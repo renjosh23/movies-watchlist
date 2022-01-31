@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import Moment from "react-moment";
 import { GlobalContext } from "../context/GlobalState";
+import {StarFilled} from '@ant-design/icons'
 
 export const ResultCard = ({ movie }) => {
   const {
@@ -39,6 +40,9 @@ export const ResultCard = ({ movie }) => {
           <h3 className="title">{movie.title}</h3>
           <h4 className="release-date">
             <Moment format="YYYY">{movie.release_date}</Moment>
+          </h4>
+          <h4 className="vote_average">
+          <StarFilled style={{marginRight: 10}}/>{movie.vote_average}
           </h4>
         </div>
 
